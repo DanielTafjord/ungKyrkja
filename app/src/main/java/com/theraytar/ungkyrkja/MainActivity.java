@@ -69,22 +69,6 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-//Currently not in use
-//    public static boolean isDownloadManagerAvailable(Context context) {
-//        try{
-//            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.GINGERBREAD){
-//                return false;
-//            }
-//            Intent intent = new Intent(Intent.ACTION_MAIN);
-//            intent.addCategory(Intent.CATEGORY_LAUNCHER);
-//            intent.setClassName("com.android.providers.downloads.ui", "com.android.providers.downloads.ui.DownloadList");
-//            List<ResolveInfo> list = context.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
-//            return list.size() > 0;
-//        } catch (Exception e){
-//            return false;
-//        }
-//    }
-
     public void DownloadFile(){
         deleteFile(Environment.getExternalStorageDirectory()+"/ungKyrkja/", "uk-xml.xml");
         String url = "http://www.ungkyrkja.co.nf/uk-xml.xml";
